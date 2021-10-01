@@ -11,7 +11,7 @@ const cors = require('cors');
 const { app } = require('../Server');
 
 const GlobalErrorHandler = require('../Cantrollers/Error');
-const AppError = require('../utils/AppError');
+const AppError = require('../Utils/AppError');
 
 const { API_ROUTES, API_URL } = require('../Configration/defaults');
 

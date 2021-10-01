@@ -1,4 +1,4 @@
-const AppError = require('../utils/AppError');
+const AppError = require('../Utils/AppError');
 const catchAsync = require('../Utils/CatchAsync');
 
 const { Find_Conversations_WithDetails, Find_Conversation_Data } = require('../DataBaseHandler/Conversation');

@@ -1,4 +1,4 @@
-const AppError = require('../utils/AppError');
+const AppError = require('../Utils/AppError');
 const catchAsync = require('../Utils/CatchAsync');
 
 const { Find_All_Contacts, Find_All_Contacts_By_User } = require('../DataBaseHandler/contact');
