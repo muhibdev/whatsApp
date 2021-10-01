@@ -1,0 +1,251 @@
+#sign,
+#log-in {
+  background-color: var(--color-06);
+  height: 100vh;
+  min-height: 550px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#sign .header,
+#log-in .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 11px #ccc;
+  padding: 15px;
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+  margin-bottom: 0.2rem;
+  color: var(--color-07);
+}
+
+#sign .header .login-btn,
+#log-in .header .login-btn {
+  color: var(--color-03);
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0 0.5rem;
+  border-bottom: 1px solid var(--color-03);
+  line-height: 1.5;
+}
+
+#sign .info,
+#log-in .info {
+  padding: 10px;
+  margin-top: 0.8rem;
+  font-size: 0.7em;
+  text-align: center;
+  opacity: 0.9;
+  font-family: 'Neue Helvetica Extended';
+  margin-bottom: auto;
+}
+
+#sign form,
+#log-in form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 70%;
+}
+
+#sign form .avatar,
+#log-in form .avatar {
+  text-align: center;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1rem auto;
+  width: 9rem;
+  height: 9rem;
+  margin-top: 0;
+}
+
+#sign form .avatar.upload #upload,
+#log-in form .avatar.upload #upload {
+  opacity: 1;
+}
+
+#sign form .avatar img,
+#log-in form .avatar img {
+  width: 100%;
+  height: 100%;
+  max-width: 9rem;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+}
+
+#sign form .avatar #camera,
+#sign form .avatar #upload,
+#log-in form .avatar #camera,
+#log-in form .avatar #upload {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: var(--color-07);
+}
+
+#sign form .avatar:hover #camera,
+#log-in form .avatar:hover #camera {
+  opacity: 1;
+}
+
+#sign form .input-container,
+#log-in form .input-container {
+  color: var(--color-07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  padding-left: 4px;
+}
+
+#sign form .input-container svg,
+#log-in form .input-container svg {
+  margin-right: 0.8rem;
+  opacity: 0.8;
+}
+
+#sign form .input-container > div,
+#log-in form .input-container > div {
+  position: relative;
+  margin-right: 0.2rem;
+  flex: 1 0;
+}
+
+#sign form .input-container > div .input-info,
+#log-in form .input-container > div .input-info {
+  transition: all 0.3s ease-in-out;
+  font-size: 0.8rem;
+  color: var(--color-08);
+  margin-bottom: 0.2rem;
+}
+
+#sign form .input-container > div input,
+#log-in form .input-container > div input {
+  color: var(--color-12);
+  width: 100%;
+  font-size: 1rem;
+  padding: 4px;
+  border: none;
+  outline: none;
+  padding-left: 0;
+  background-color: var(--color-06);
+  font-weight: normal;
+}
+
+#sign form .input-container > div ::placeholder,
+#log-in form .input-container > div ::placeholder {
+  color: var(--color-12);
+  opacity: 0.5;
+}
+
+#sign form .input-container > div #eye,
+#log-in form .input-container > div #eye {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: 10px;
+  margin: 0;
+  cursor: pointer;
+}
+
+#sign form .input-container > div .border,
+#log-in form .input-container > div .border {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 2px;
+  opacity: 0.5;
+  background: var(--color-07);
+}
+
+#sign form .input-container > div .border::before,
+#log-in form .input-container > div .border::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-03);
+  width: 0%;
+  height: 2px;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+#sign form .input-container > div:focus-within .border::before,
+#log-in form .input-container > div:focus-within .border::before {
+  width: 100%;
+}
+
+#sign form button,
+#log-in form button {
+  margin: 1rem auto;
+  max-width: max-content;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-03);
+  color: var(--color-09);
+  border: none;
+  font-size: 0.95rem;
+  border-radius: 3px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#sign form button:hover,
+#log-in form button:hover {
+  transform: scale(1.05);
+}
+
+#sign form .username-length-error button,
+#sign form .username-exist button,
+#sign form .pin-length-error button,
+#log-in form .username-length-error button,
+#log-in form .username-exist button,
+#log-in form .pin-length-error button {
+  opacity: 0;
+}
+
+#sign .info-msg,
+#log-in .info-msg {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#sign .info-msg a,
+#log-in .info-msg a {
+  color: var(--color-03);
+  line-height: 1.8;
+  padding: 0 0.2rem;
+}
+
+#sign:not(.username-exist) .input-info.username-has,
+#sign .input-container:focus-within .input-info.username-length,
+#sign:not(.username-length-error) .input-info.username-length,
+#sign:not(.pin-length-error) .input-info.pin-length,
+#sign .input-container:focus-within .input-info.pin-length,
+#sign:not(.invalid-criediancials) .input-info.invalid,
+#log-in:not(.username-exist) .input-info.username-has,
+#log-in .input-container:focus-within .input-info.username-length,
+#log-in:not(.username-length-error) .input-info.username-length,
+#log-in:not(.pin-length-error) .input-info.pin-length,
+#log-in .input-container:focus-within .input-info.pin-length,
+#log-in:not(.invalid-criediancials) .input-info.invalid {
+  padding: 0;
+  font-size: 0px !important;
+  margin: 0;
+}
+
+#sign input:focus:invalid ~ .border::before,
+#log-in input:focus:invalid ~ .border::before {
+  background: var(--color-08);
+}
+/*# sourceMappingURL=index.css.map */

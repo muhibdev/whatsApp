@@ -1,0 +1,30 @@
+.container {
+  position: relative;
+}
+
+.page {
+  inset: 0;
+}
+
+.page-enter {
+  position: absolute;
+  transform: translatex(100%);
+}
+
+.page-enter-active {
+  position: absolute;
+  transform: translatex(0%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  position: absolute;
+  transform: translatex(0%);
+}
+
+.page-exit-active {
+  position: absolute;
+  transform: translatex(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
+/*# sourceMappingURL=PageTransiion.css.map */

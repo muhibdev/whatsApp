@@ -1,0 +1,85 @@
+#chat {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 53px);
+  justify-content: space-between;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-06);
+  padding-bottom: 4rem;
+  padding-top: 3.5rem;
+}
+
+#chat .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 1rem;
+}
+
+#chat .footer {
+  flex: 0 0 10%;
+  display: flex;
+  padding: 6px;
+  align-items: center;
+  color: var(--color-07);
+  position: fixed;
+  bottom: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-06);
+}
+
+#chat .input-container {
+  flex: 1 0;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-09);
+  border-radius: 75px;
+  padding: 8px;
+  align-items: center;
+}
+
+#chat .input-container input {
+  caret-color: var(--color-01);
+  caret-width: 4px;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding: 0 8px;
+}
+
+#chat .input-container .emoji {
+  margin-left: 4px;
+  transform: scale(1.1);
+}
+
+#chat .input-container .attachment {
+  margin-right: 12px;
+  transform: rotate(-90deg);
+}
+
+#chat .input-container .camera {
+  margin-right: 6px;
+  transform: scale(0.9);
+}
+
+#chat .mic {
+  flex: 0 0 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-left: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-01);
+  color: var(--color-09);
+}
+/*# sourceMappingURL=index.css.map */

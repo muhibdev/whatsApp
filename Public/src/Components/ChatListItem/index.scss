@@ -1,0 +1,79 @@
+#recent-chats li a {
+	display: flex;
+	padding: 0.8rem;
+}
+
+#recent-chats .recent-chat-details {
+	flex: 1 0 calc(100% - 3.5rem);
+	display: flex;
+	flex-direction: row;
+}
+
+#recent-chats .recent-chat-details > div:nth-of-type(1) {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+}
+
+#recent-chats .recent__chat {
+	color: var(--color-07);
+	font-size: 0.95rem;
+	font-weight: 300;
+}
+
+#recent-chats div,
+#recent-chats p {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#recent-chats .recent-chat-details > div:nth-of-type(2) {
+	flex: 1 0 3.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+#recent-chats .recent-chat_time {
+	flex: 1 0 100%;
+	font-size: 0.75rem;
+	text-align: end;
+}
+#recent-chats .mute-btn {
+	display: none;
+	width: 24px;
+	height: 24px;
+}
+
+#recent-chats .mute-btn svg {
+	transform: scale(1.1);
+	color: var(--color-07);
+}
+#recent-chats .mute .mute-btn {
+	display: block;
+}
+
+#recent-chats .unread-chat-number {
+	text-align: center;
+	background-color: var(--color-03);
+	color: var(--color-06);
+	border-radius: 50%;
+	line-height: 1.5;
+	font-size: 0.7rem;
+	width: 20px;
+	height: 20px;
+	padding: 0.2rem;
+	margin: 0 3px;
+	display: none;
+}
+
+/*  if recest mas */
+#recent-chats .unread-msg .unread-chat-number {
+	display: block;
+}
+
+#recent-chats .unread-msg .recent-chat_time {
+	color: var(--color-03);
+}

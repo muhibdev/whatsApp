@@ -1,0 +1,32 @@
+#status {
+	.status {
+		display: flex;
+		padding: 0.8rem;
+		position: relative;
+		.info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 0.5rem 1rem;
+		}
+		p {
+			font-size: 0.85rem;
+		}
+
+		.add-Status {
+			position: absolute;
+			background: var(--color-03);
+			color: var(--color-09);
+			border-radius: 50%;
+			border: 2px solid var(--color-09);
+			width: 1.3rem;
+			height: 1.3rem;
+			bottom: 0.8rem;
+			left: 3.2rem;
+			padding: 0.2rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}

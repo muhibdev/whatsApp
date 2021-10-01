@@ -1,0 +1,62 @@
+/*  Header Stylining */
+header.chat-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header.chat-header .user_profile {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+}
+
+header.chat-header .profile-img {
+  padding: 0;
+}
+
+header.chat-header .title {
+  flex: 1 0;
+  padding: 0 8px;
+}
+
+header.chat-header .title .title-main {
+  font-size: 1.1rem;
+}
+
+header.chat-header .title .title-sub {
+  padding: 0.2rem 0;
+  font-size: 0.8rem;
+  color: var(--color-06);
+}
+
+header.chat-header > * {
+  flex: 0 0 2.5rem;
+}
+
+header.chat-header a svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+header.chat-header .voice-call-btn svg {
+  padding-left: 0.4rem;
+}
+
+header.chat-header .back-btn {
+  padding: 0;
+  flex: 0 0 1.5rem;
+}
+
+header.chat-header .back-btn svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+header.chat-header .title-main {
+  font-family: 'Neue Helvetica Medium';
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=index.css.map */

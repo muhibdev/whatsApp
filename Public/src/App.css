@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --opacity: 1;
+  /* Light Color Scheme */
+  --color-01: rgba(7, 94, 84, var(--opacity, 1));
+  --color-02: rgba(18, 140, 126, var(--opacity, 1));
+  --color-03: rgba(37, 211, 102, var(--opacity, 1));
+  --color-04: rgba(220, 248, 198, var(--opacity, 1));
+  --color-05: rgba(52, 183, 241, var(--opacity, 1));
+  --color-06: rgba(236, 229, 221, var(--opacity, 1));
+  --color-07: #9a9282;
+  --color-08: red;
+  --color-09: #fff;
+  --color-10: #fad9644a;
+  --color-11: #000000bf;
+  --color-12: #000;
+}
+
+.demo {
+  color: var(--color-01);
+  color: var(--color-02);
+  color: var(--color-03);
+  color: var(--color-04);
+  color: var(--color-05);
+  color: var(--color-06);
+  color: var(--color-07);
+}
+
+/* Global Styling */
+body {
+  font-family: 'Neue Helvetica Light';
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden,
+[hidden] {
+  display: none;
+}
+
+/*Global Components */
+.user_profile {
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  flex: 0 0 3.5rem;
+}
+
+p {
+  color: var(--color-07);
+  letter-spacing: 0.05rem;
+}
+
+h3 {
+  font-family: 'Neue Helvetica Medium';
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+/*# sourceMappingURL=App.css.map */

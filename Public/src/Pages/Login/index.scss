@@ -1,0 +1,11 @@
+#log-in {
+	form .avatar {
+		width: 10rem;
+		height: 10rem;
+		margin-top: 0;
+		img {
+			max-width: 100%;
+			filter: brightness(10%);
+		}
+	}
+}

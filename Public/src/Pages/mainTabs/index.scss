@@ -1,0 +1,87 @@
+/*  .Navigation Styling */
+
+.nav {
+	font-family: 'Neue Helvetica Medium';
+	position: sticky;
+	top: -1px;
+	background: var(--color-01);
+	color: var(--color-06);
+	display: flex;
+	align-content: center;
+	padding: 0px 10px;
+	z-index: 1;
+	transition: all 0.3s ease-in-out;
+
+	& > a {
+		width: 2.5rem;
+		height: 2.5rem;
+		flex: 0 0 2.5rem;
+		display: flex;
+		align-items: center;
+	}
+	.MuiTabs-root {
+		flex: 1 0;
+	}
+	.MuiTabs-flexContainer > * {
+		margin-top: auto;
+		flex: 1 0 calc((100% / 3) - 26px);
+		text-align: center;
+		padding: 8px 0px;
+		font-weight: 500;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		line-height: 2;
+		font-weight: 500;
+		transition: all 0.3s ease;
+	}
+	.MuiTabs-flexContainer > *:not(.Mui-selected) {
+		opacity: 0.8;
+		transform: scale(0.9);
+		border-color: transparent;
+	}
+
+	.MuiTabs-flexContainer .camera-btn {
+		flex: 0 0 26px;
+		border: none;
+		margin-top: 4px;
+	}
+
+	button:after {
+		display: none;
+	}
+	.unread-chats[data-unread-msg] {
+		position: relative;
+		&::after {
+			content: attr(data-unread-msg);
+			display: block;
+			position: absolute;
+			right: 0;
+			background-color: var(--color-06);
+			color: var(--color-01);
+			border-radius: 50%;
+			line-height: 1.8;
+			font-size: 0.65rem;
+			width: 20px;
+			height: 20px;
+			margin: 0 5px;
+		}
+	}
+	.un-seen-status::after {
+		content: '';
+		display: block;
+		position: relative;
+		width: 6px;
+		height: 6px;
+		background-color: var(--color-06);
+		left: -10px;
+		margin-left: -15px;
+		margin-top: -2px;
+
+		border-radius: 50%;
+	}
+
+	.PrivateTabIndicator-colorSecondary-3 {
+		background-color: var(--color-06);
+		height: 3px;
+	}
+}

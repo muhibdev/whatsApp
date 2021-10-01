@@ -1,0 +1,81 @@
+#chat .chat-item {
+  background: var(--color-09);
+  max-width: 75%;
+  padding: 0 0.6rem;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  border-radius: 0.65rem;
+  position: relative;
+  box-shadow: 0px 2px 5px rgba(7, 94, 84, 0.2);
+  font-family: 'Neue Helvetica Roman';
+}
+
+#chat .chat-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--color-09);
+  box-shadow: 0px 2px 5px rgba(7, 94, 84, 0.2);
+}
+
+#chat .chat-item .message {
+  padding: 0.4rem 0;
+  padding-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+
+#chat .chat-item .info {
+  align-self: flex-end;
+  padding: 0.2rem 0;
+  padding-top: 0.7rem;
+  align-items: center;
+  display: flex;
+}
+
+#chat .chat-item .info .chat-time {
+  font-size: 0.7rem;
+  color: var(--color-07);
+}
+
+#chat .chat-item .info .status {
+  color: var(--color-07);
+  margin-left: 0.3rem;
+}
+
+#chat .my-chat {
+  border-top-right-radius: 0;
+  align-self: flex-end;
+  background: var(--color-04);
+}
+
+#chat .my-chat::after {
+  right: -8px;
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+  background: var(--color-04);
+}
+
+#chat .other-chat {
+  border-top-left-radius: 0;
+}
+
+#chat .other-chat .status {
+  display: none;
+}
+
+#chat .other-chat::after {
+  left: -8px;
+  clip-path: polygon(100% 0, 0 0, 99% 100%);
+}
+
+#chat .read svg {
+  color: var(--color-05);
+}
+
+#chat .other-chat ~ .other-chat,
+#chat .my-chat ~ .my-chat {
+  margin: 0.1rem 0;
+}
+/*# sourceMappingURL=index.css.map */

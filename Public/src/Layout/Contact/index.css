@@ -1,0 +1,59 @@
+/*  Header Stylining */
+header.contact-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header.contact-header .user_profile {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+}
+
+header.contact-header .title {
+  flex: 1 0;
+  padding: 0 8px;
+}
+
+header.contact-header .title .title-main {
+  font-size: 1.1rem;
+}
+
+header.contact-header .title .title-sub {
+  padding: 0.2rem 0;
+  font-size: 0.8rem;
+  color: var(--color-06);
+}
+
+header.contact-header > * {
+  flex: 0 0 2.5rem;
+}
+
+header.contact-header a svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+header.contact-header .voice-call-btn svg {
+  padding-left: 0.4rem;
+}
+
+header.contact-header .back-btn {
+  padding: 0 8px;
+  padding-right: 1rem;
+  flex: 0 0 1.5rem;
+}
+
+header.contact-header .back-btn svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+header.contact-header .title-main {
+  font-family: 'Neue Helvetica Medium';
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=index.css.map */

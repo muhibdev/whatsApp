@@ -1,0 +1,117 @@
+.add-contact-model {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-06);
+  border-radius: 5px;
+  width: 95%;
+  min-height: 300px;
+  height: 60vh;
+  padding: 1.5rem;
+  overflow: auto;
+  max-width: 600px;
+}
+
+.add-contact-model h1 {
+  font-size: 1.4rem;
+  color: var(--color-02);
+}
+
+.add-contact-model #close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+.add-contact-model form {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.add-contact-model form input {
+  border: none;
+  width: 100%;
+  padding: 0.4rem 0.4rem;
+  background: transparent;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.add-contact-model form svg {
+  cursor: pointer;
+}
+
+.add-contact-model form ::placeholder {
+  font-size: 1rem;
+  padding: 4px 0;
+  opacity: 0.5;
+}
+
+.add-contact-model form .border {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-07);
+  height: 1px;
+  opacity: 0.5;
+}
+
+.add-contact-model form input:focus ~ .border {
+  background: var(--color-02);
+  opacity: 0.9;
+}
+
+.add-contact-model form svg {
+  color: var(--color-02);
+  position: absolute;
+  right: 4px;
+  bottom: 5px;
+  transform: scale(0.9);
+}
+
+.add-contact-model ul {
+  list-style-type: none;
+}
+
+.add-contact-model ul li {
+  display: flex;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+}
+
+.add-contact-model ul li .contact-details {
+  flex: 1 0 auto;
+  max-width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 0.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.add-contact-model ul li button {
+  margin-left: auto;
+  border: none;
+  padding: 0.5rem 1rem;
+  align-self: center;
+  boder-radius: 3px;
+  background: transparent;
+  border: 1px solid var(--color-02);
+  cursor: pointer;
+}
+
+.ReactModal__Overlay {
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+/*# sourceMappingURL=index.css.map */

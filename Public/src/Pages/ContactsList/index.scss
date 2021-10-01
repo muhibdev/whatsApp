@@ -1,0 +1,27 @@
+#new-contact-btn {
+	padding: 1rem 0;
+	cursor: pointer;
+	.contact-details {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.icon {
+		background: var(--color-02);
+		color: var(--color-09);
+		flex: 0 0 auto;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		svg {
+			padding: 0.65rem;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.title {
+		flex: 1 0 auto;
+		font-size: 1rem;
+		padding: 1rem;
+	}
+}

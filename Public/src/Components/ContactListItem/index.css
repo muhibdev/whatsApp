@@ -1,0 +1,31 @@
+#contact-list {
+  margin-top: 3rem;
+}
+
+#contact-list li a {
+  display: flex;
+  padding: 0.8rem;
+}
+
+#contact-list .contact-details {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: calc(100% - 3.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.6rem 0.8rem;
+}
+
+#contact-list p {
+  color: var(--color-11);
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+#contact-list h3 {
+  font-family: 'Neue Helvetica Medium';
+  font-weight: normal;
+  font-size: 1rem;
+}
+/*# sourceMappingURL=index.css.map */

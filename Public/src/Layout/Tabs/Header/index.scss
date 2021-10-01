@@ -1,0 +1,33 @@
+/*  Header Stylining */
+header {
+	background: var(--color-01);
+	color: var(--color-06);
+	display: flex;
+	align-items: center;
+	padding: 6px;
+	padding-bottom: 2px;
+	z-index: 2;
+	transition: all 0.3s ease-in-out;
+	position: sticky;
+	top: -50px;
+	&.sticky-active {
+		top: -1px;
+	}
+}
+.sticky-active + main .nav {
+	top: 50px;
+}
+header > * {
+	padding: 8px;
+}
+
+header .title-main {
+	font-family: 'Neue Helvetica Medium';
+	font-weight: normal;
+	font-size: 1.4rem;
+}
+
+header .search-btn,
+header .call-btn {
+	margin-left: auto;
+}

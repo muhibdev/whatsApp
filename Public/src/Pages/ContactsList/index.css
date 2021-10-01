@@ -1,0 +1,32 @@
+#new-contact-btn {
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+#new-contact-btn .contact-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#new-contact-btn .icon {
+  background: var(--color-02);
+  color: var(--color-09);
+  flex: 0 0 auto;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+#new-contact-btn .icon svg {
+  padding: 0.65rem;
+  width: 100%;
+  height: 100%;
+}
+
+#new-contact-btn .title {
+  flex: 1 0 auto;
+  font-size: 1rem;
+  padding: 1rem;
+}
+/*# sourceMappingURL=index.css.map */
