@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === 'development') {
 	app.use(morgan('dev'));
 }
 
-app.use('/', express.static('Public'));
+app.use('/', express.static('Public/public'));
 app.use('/media', express.static('Media'));
 
 /* Routed */
