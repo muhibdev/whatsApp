@@ -34,7 +34,6 @@ if (process.env.NODE_ENV === 'development') {
 	app.use(morgan('dev'));
 }
 
-app.use('/', express.static('Public/public'));
 app.use('/media', express.static('Media'));
 
 /* Routed */
@@ -44,4 +43,11 @@ app.use(API_ROUTES.CONTACTS, Contacts);
 
 app.all(`${API_URL}`, (req, res, next) => {
 	next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
+});
+
+// app.use('/', express.static('App/build'));
+app.use(express.static(path.resolve(__dirname, '../App/build')));
+
+app.get('*', (req, res, next) => {
+	res.sendFile(path.join(__dirname, '../App/build', 'index.html'));
 });

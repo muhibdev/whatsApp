@@ -18,6 +18,7 @@ import ConversationDetails from './Pages/ConversationDetails';
 import SignUp from './Pages/SignUp';
 import Login from './Pages/Login';
 
+import './Fonts/style.css';
 import './App.scss';
 import './PageTransiion.scss';
 import 'react-virtualized/styles.css';
