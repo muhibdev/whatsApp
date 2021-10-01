@@ -79,7 +79,7 @@ const AddChat = ({ user, conversation }) => {
 					</svg>
 				</div>
 			</div>
-			<div className='mic'>
+			<div onClick={sendChat} className='mic'>
 				<svg width='24' height='24'>
 					<path
 						fill='currentColor'
