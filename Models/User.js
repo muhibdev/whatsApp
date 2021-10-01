@@ -44,7 +44,7 @@ const Schema = new mongoose.Schema(
 			select: false,
 		},
 		status: {
-			type: String,
+			type: Date,
 			default: Date.now(),
 		},
 		statuses: [

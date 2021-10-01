@@ -13,20 +13,20 @@ const Create_Conversation_Private = async (...members) => {
 
 const Find_Conversation_ByMembers = async (...members) => {
 	return await Conversation.findOne({
-		members: { $in: members },
+		members: { $all: members },
 	});
 };
 
 const Find_Conversations_ByMembers = async (...members) => {
 	return await Conversation.find({
-		members: { $in: members },
+		members: { $all: members },
 	});
 };
 
-const Find_Conversation_ByIds = async (ids) => {
+const Find_Conversation_ByIds = async (ids, ...populate) => {
 	return await Conversation.find({
 		_id: { $in: ids },
-	});
+	}).populate(populate);
 };
 
 const Find_Conversations_WithDetails = async (id) => {
@@ -37,7 +37,11 @@ const Find_Conversations_WithDetails = async (id) => {
 const Find_Conversation_WithDetails = async ({ members, type, _id }, id) => {
 	const latestchat = await FIND_LATEST_CHAT(_id);
 	const unreadChats = await Count_Unread_Chats(_id);
-	const user = id && (await User.findById(id).select(['name', 'avatar', 'about', 'username']));
+	let user;
+	if (id) {
+		const otherUserId = members.find((ele) => ele.toString() !== id.toString());
+		user = await User.findById(otherUserId).select(['name', 'avatar', 'about', 'username']);
+	}
 	return {
 		type,
 		_id,
@@ -48,9 +52,14 @@ const Find_Conversation_WithDetails = async ({ members, type, _id }, id) => {
 	};
 };
 
-const Find_Conversation_Data = async (conversationID) => {
-	const chats = await Get_All_Chats(conversationID);
-	return { chats };
+const Find_Conversation_Data = async (conversationID, userID) => {
+	try {
+		const chats = await Get_All_Chats(conversationID);
+		const [conversation] = (await Find_Conversation_ByIds(conversationID, 'members')) || [];
+		return { chats, conversation };
+	} catch (error) {
+		throw error;
+	}
 };
 
 const Find_Conversation_Members = async (conversationID) => {

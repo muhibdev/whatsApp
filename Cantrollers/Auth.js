@@ -117,6 +117,9 @@ exports.protect = catchAsync(async (req, res, next) => {
 });
 
 exports.tryLogin = catchAsync(async (req, res, next) => {
+	if (!req.user) {
+		return next(new AppError('You are not logged in! Please log in to get access.', 401));
+	}
 	const user = await User.findById(req.user._id);
 
 	createSendToken(user, 201, req, res);

@@ -12,6 +12,12 @@ const Find_Users = async (...ids) => {
 	});
 };
 
+const Update_User_Stateus = async (id, status) => {
+	return await User.findByIdAndUpdate(id, {
+		status,
+	});
+};
+
 const Find_User = async (id) => {
 	return await User.findById(id);
 };
@@ -20,4 +26,5 @@ module.exports = {
 	Create_User,
 	Find_User,
 	Find_Users,
+	Update_User_Stateus,
 };

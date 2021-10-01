@@ -11,6 +11,7 @@ const CHAT_STATUS_TYPES = {
 	PENDING: 'pending',
 	DELIVERED: 'delivered',
 	READ: 'read',
+	CONNECTIONG: 'connecting',
 };
 
 //
@@ -25,14 +26,16 @@ const CONVERSATION_TYPES = {
 //
 //
 const CALL_TYPES = {
-	VOICE: 'voice',
+	AUDIO: 'audio',
 	VIDEO: 'video',
 };
 
 const CALL_STATUS_TYPES = {
-	MISSED: 'missed',
-	ACCEPTED: 'accepted',
+	CONNECTING: 'Connecting',
+	CALLING: 'calling',
 	RINGING: 'ringing',
+	DISCONNECTED: 'disconnected',
+	ACCEPTED: 'accepted',
 };
 
 //

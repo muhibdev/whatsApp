@@ -3,6 +3,14 @@ const DEFAULT_ABOUT_INFO_USER = 'Hey there! i am using WhatsApp';
 const DEFAULT_ABOUT_INFO_GROUP = 'Hey there! its whatsapp group';
 const DEFAULT_CHAT_BACKGROUND = 'dsd';
 
+const OFFLINE_STATUS = () => {
+	return Date.now();
+};
+
+const ONLINE_STATUS = () => {
+	return Date.now();
+};
+
 const MAX_SEARCH_RESULTS = 10;
 const API_URL = '/api';
 
@@ -26,4 +34,6 @@ module.exports = {
 	DEFAULT_ABOUT_INFO_GROUP,
 	DEFAULT_CHAT_BACKGROUND,
 	MAX_SEARCH_RESULTS,
+	OFFLINE_STATUS,
+	ONLINE_STATUS,
 };

@@ -27,11 +27,28 @@ const Add_Chat = async (userID, data) => {
 	});
 };
 
-const Update_Chat_Status = (status) => async (id) => {
-	return await Chat.findByIdAndUpdate(id, {
-		status: status,
-	}).select('status');
+const Update_Chat_Status = async (conversationID, status) => {
+	return await Chat.updateMany(
+		{ conversation: conversationID },
+		{
+			status: status,
+		},
+		{
+			multi: true,
+		}
+	);
 };
+
+const Update_Chats_STATUS = async (conversation, status) => {
+	return await Chat.updateMany(
+		{ conversation: conversation },
+		{
+			status: status,
+		}
+	);
+};
+
+// const Update_Chat_Status_delivered = async (id) => {};
 
 module.exports = {
 	FIND_LATEST_CHAT,
@@ -39,4 +56,5 @@ module.exports = {
 	Count_Unread_Chats,
 	Add_Chat,
 	Update_Chat_Status,
+	Update_Chats_STATUS,
 };

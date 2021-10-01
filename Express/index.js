@@ -16,6 +16,8 @@ const AppError = require('../utils/AppError');
 const { API_ROUTES, API_URL } = require('../Configration/defaults');
 
 const User = require('../Routes/User');
+const Conversation = require('../Routes/Conversation');
+const Contacts = require('../Routes/Contacts');
 
 app.use(xss());
 app.use(helmet());
@@ -34,7 +36,12 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use('/', express.static('Public'));
 app.use('/media', express.static('Media'));
+
+/* Routed */
 app.use(API_ROUTES.USER, User);
+app.use(API_ROUTES.CONVERSATION, Conversation);
+app.use(API_ROUTES.CONTACTS, Contacts);
+
 app.all(`${API_URL}`, (req, res, next) => {
 	next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });

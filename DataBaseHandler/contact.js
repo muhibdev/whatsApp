@@ -6,6 +6,12 @@ const Find_Contact = async (id) => {
 	return await User.findById(id).select(['name', 'avatar', 'about', 'username']);
 };
 
+const Find_All_Contacts_By_User = async (id) => {
+	return await User.findById(id)
+		.select('contacts')
+		.populate('contacts.user');
+};
+
 const Find_All_Contacts = async (...ids) => {
 	return await User.find({ _id: { $in: ids } }).select(['name', 'avatar', 'about', 'username']);
 };
@@ -17,7 +23,7 @@ const Add_Contact = async (id, contact) => {
 	}
 	await Add_Contact_ToList(id, contact, coversation._id);
 
-	const otherUser = coversation.members.find((ele) => ele !== id);
+	const otherUser = coversation.members.find((ele) => ele.toString() !== id.toString());
 	const newContact = await Find_Contact(otherUser);
 	return {
 		user: newContact,
@@ -40,4 +46,5 @@ module.exports = {
 	Add_Contact,
 	Find_Contact,
 	Find_All_Contacts,
+	Find_All_Contacts_By_User,
 };

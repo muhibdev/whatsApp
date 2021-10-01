@@ -5,7 +5,7 @@ const { CALL_STATUS_TYPES, CALL_TYPES } = require('../Configration/Types');
 
 const Schema = new mongoose.Schema(
 	{
-		Conversation: {
+		conversation: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: CONVERSATION,
 			required: true,
@@ -21,12 +21,12 @@ const Schema = new mongoose.Schema(
 		type: {
 			type: String,
 			enum: Object.values(CALL_TYPES),
-			default: CALL_TYPES.VOICE,
+			default: CALL_TYPES.AUDIO,
 		},
 		status: {
 			type: String,
 			enum: Object.values(CALL_STATUS_TYPES),
-			default: CALL_STATUS_TYPES.RINGING,
+			default: CALL_STATUS_TYPES.CONNECTING,
 		},
 		data: {
 			type: Object,
