@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index",
     "start:dev": "nodemon index",
-    "build": "cd Public && npm install && npm run build"
+    "build": "cd App && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
