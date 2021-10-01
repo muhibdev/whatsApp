@@ -41,7 +41,7 @@ app.use(API_ROUTES.USER, User);
 app.use(API_ROUTES.CONVERSATION, Conversation);
 app.use(API_ROUTES.CONTACTS, Contacts);
 
-app.all(`${API_URL}`, (req, res, next) => {
+app.all(`${API_URL}*`, (req, res, next) => {
 	next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 
